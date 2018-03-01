@@ -1,0 +1,27 @@
+entity UserData {
+	connectionId String required,
+    firstname String required,
+    lastname String required,
+    birthday Instant required,
+    email String required,
+    phoneNumber String required,
+    deviceData DeviceData required
+    pin String required
+}
+
+entity DeviceData {
+	osName String required,
+    osVersion String  required
+}
+
+
+entity Country {
+	countryName String
+}
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with view
